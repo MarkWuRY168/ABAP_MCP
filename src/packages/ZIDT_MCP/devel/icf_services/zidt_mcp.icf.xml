@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  ICF服务配置: ZIDT_MCP
+  路径: /default_host/sap/zidt_mcp
+  处理类: ZCL_SAP_MCP_HANDLER
+-->
+<icf_service>
+  <service_name>ZIDT_MCP</service_name>
+  <path>/default_host/sap/zidt_mcp</path>
+  <handler_class>ZCL_SAP_MCP_HANDLER</handler_class>
+  <description>MCP工具HTTP服务</description>
+
+  <!-- 配置说明 -->
+  <configuration>
+    <sicf_transaction>SICF</sicf_transaction>
+    <create_path>/default_host/sap</create_path>
+    <service_name>zidt_mcp</service_name>
+  </configuration>
+
+  <!-- 处理程序列表 -->
+  <handlers>
+    <handler>
+      <class_name>ZCL_SAP_MCP_HANDLER</class_name>
+      <order>1</order>
+    </handler>
+  </handlers>
+
+  <!-- 服务参数 -->
+  <parameters>
+    <parameter>
+      <name>GC_MAX_REQUEST_SIZE</name>
+      <value>1048576</value> <!-- 1MB -->
+      <description>最大请求大小（字节）</description>
+    </parameter>
+  </parameters>
+
+  <!-- 安全配置 -->
+  <security>
+    <authentication_required>true</authentication_required>
+    <client>100</client>
+  </security>
+</icf_service>

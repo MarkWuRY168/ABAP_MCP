@@ -1,0 +1,13 @@
+# ABAP Git临时文件
+*.abapGit
+.abap_git.xml
+
+# SAP生成的临时文件
+*.tmp
+*.bak
+*.old
+
+ # IDE配置
+.idea/
+.vscode/
+*.swp
